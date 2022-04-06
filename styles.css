@@ -1,0 +1,41 @@
+/* 외부 글꼴 가져옴 */
+@font-face {
+    font-family: 'LAB디지털';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* padding으로 인해 box-size가 변하는 것을 방지 */
+*{ font-family: 'LAB디지털'; box-sizing: border-box; }
+/* html, body 영역에 기본적으로 있는 margin 제거하고 시작 */
+html, body{ margin: 0; background-color: black
+}
+
+.container{
+    margin: 10px auto; padding: 5px 0 15px;
+    border: white 2px solid;
+    text-align: center;
+    border-radius: 20px;
+    width: 80%; min-width: 320px; max-width: 640px;
+    height: 200px;
+}
+h2{ color: white; }
+h1{ color: red; }
+
+/* h1 안 span 태그의 너비 조절 : 현재는 0에 해당하는 공간만큼만 있으나, 카운트가 시작되면 숫자에 따라 더 넓은 영역이 필요할 수 있음 */
+h1 > span{
+    display: inline-block;
+    width: 40px;
+}
+
+button{
+    color: darkslategray; background-color: lightgray;
+    font-size: 16px; padding: 6px;
+    width: 100px; border: none; border-radius: 3px;
+    cursor: pointer;
+}
+button:active{
+    color: lightgray;
+    background-color: darkslategray;
+}
